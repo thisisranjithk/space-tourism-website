@@ -9,6 +9,8 @@ export default {
     extend: {
       colors: {
         lightBlue: "#D0D6F9",
+        darkBlue: "#0B0D17",
+        darkGrey: "#9AA6B2",
       },
       backgroundImage: {
         homeDesktop: "url('/assets/home/background-home-desktop.jpg')",

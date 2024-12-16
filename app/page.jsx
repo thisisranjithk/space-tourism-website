@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 export default function Home() {
   return (
     <section className="bg-homeMobile md:bg-homeTablet lg:bg-homeDesktop main-container">
-      <Navbar />
+      <Navbar activeTab="Home" />
       <div
         id="home"
         className="flex container mx-auto items-center justify-center min-h-[80vh]"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MENULINKS } from "@/constants";
-const Navbar = () => {
+const Navbar = ({ activeTab }) => {
   return (
     <>
       <header className="flex md:items-start lg:items-center justify-between h-[10vh] lg:h-[20vh] ml-[5%]">
@@ -18,7 +18,11 @@ const Navbar = () => {
                   </span>{" "}
                   {link.name}
                 </Link>
-                <div className="absolute bottom-[-30px] w-full group-hover:border-b-2 group-hover:border-blue-50"></div>
+                <div
+                  className={`absolute bottom-[-30px] w-full ${
+                    link.name === activeTab ? "border-b-2" : ""
+                  } group-hover:border-b-2 group-hover:border-blue-50`}
+                ></div>
               </li>
             ))}
           </ul>
