@@ -19,17 +19,16 @@ const Destination = () => {
     setShowData(filtered);
   }, [selected]);
 
-  console.log(showData);
   return (
-    <section className="bg-destinationDesktop md:bg-destinationTablet lg:bg-destinationDesktop main-container">
-      <Navbar />
+    <section className="bg-destinationMobile md:bg-destinationTablet lg:bg-destinationDesktop main-container">
+      <Navbar activeTab="Destination" />
       <div className="container mx-auto px-6 md:px-0 pt-6 md:pt-0">
         <h1 className="font-barlowCondense text-2xl  md:text-4xl uppercase text-center md:text-left px-12 md:pt-10 lg:pt-0">
           <span className="text-white/[.40] mr-3">O1</span> Pick your
           destination
         </h1>
         <section className="flex flex-col items-center lg:items-start lg:flex-row h-auto lg:h-[65vh]  mt-8">
-          <div className=" flex items-center">
+          <div className="flex items-center">
             {showData.map((destination) => (
               <Image
                 key={destination.name}
@@ -38,7 +37,7 @@ const Destination = () => {
                 width={480}
                 height={480}
                 priority={true}
-                className="w-36 h-36 md:w-72 md:h-72 lg:w-96 lg:h-96 mx-0 lg:mx-36 "
+                className="w-36 h-36 md:w-72 md:h-72 lg:w-96 lg:h-96 mx-0 lg:mx-36"
               />
             ))}
           </div>
