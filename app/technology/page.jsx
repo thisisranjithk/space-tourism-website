@@ -31,9 +31,17 @@ const Technology = () => {
                 <div
                   key={technology.name}
                   onClick={() => setSelected(technology.name)}
-                  className="h-16 w-16 rounded-full flex items-center justify-center border-2 cursor-pointer"
+                  className={`h-16 w-16 rounded-full flex items-center justify-center duration-300 ${
+                    technology.name === selected ? "bg-white" : "border-2"
+                  } cursor-pointer`}
                 >
-                  <span className="text-white">{index + 1}</span>
+                  <span
+                    className={`${
+                      technology.name === selected ? "text-black" : "text-white"
+                    }`}
+                  >
+                    {index + 1}
+                  </span>
                 </div>
               ))}
             </div>
