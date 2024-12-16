@@ -1,6 +1,10 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import { MENULINKS } from "@/constants";
 const Navbar = ({ activeTab }) => {
+  const [sidemenu, setSidemenu] = useState(false);
+  console.log(sidemenu);
   return (
     <>
       <header className="flex md:items-start lg:items-center justify-between h-[10vh] lg:h-[20vh] ml-[5%]">
@@ -9,7 +13,7 @@ const Navbar = ({ activeTab }) => {
           <span className="hidden lg:block h-[1px] bg-white/[.20] w-[80%] z-20 absolute right-[-30px]"></span>
         </div>
         <nav className="hidden md:flex justify-center bg-white/[.10] lg:flex-1 backdrop-blur py-8 px-20">
-          <ul className="navlinks">
+          <ul className={`navlinks`}>
             {MENULINKS.map((link, index) => (
               <li className="nav-link group" key={link.ref}>
                 <Link href={`/${link.ref}`}>
@@ -30,9 +34,44 @@ const Navbar = ({ activeTab }) => {
           </ul>
         </nav>
         <div className="block md:hidden mt-8 mr-6 lg:mt-0 lg:mr-0">
-          <img src="/assets/shared/icon-hamburger.svg" alt="Menu" />
+          <img
+            src="/assets/shared/icon-hamburger.svg"
+            alt="Menu"
+            onClick={() => setSidemenu(!sidemenu)}
+          />
         </div>
       </header>
+      <div
+        className={`block md:hidden absolute z-50 bg-[#0B0D17]/[.20] backdrop-blur-2xl duration-500 h-screen top-0 w-[75%] ${
+          sidemenu ? "right-0" : "right-[-350px]"
+        } `}
+      >
+        <ul
+          className={`flex font-barlowCondense uppercase text-2xl flex-col mt-24 space-y-6`}
+        >
+          {MENULINKS.map((link, index) => (
+            <li
+              className={`text-nowrap font-light px-12 ${
+                link.name === activeTab ? "border-r-4" : ""
+              }`}
+              key={link.ref}
+            >
+              <Link href={`/${link.ref}`}>
+                <span className="font-bold tracking-widest mr-2">0{index}</span>{" "}
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div>
+          <img
+            src="/assets/shared/icon-close.svg"
+            alt="Close"
+            className="absolute right-8 top-8"
+            onClick={() => setSidemenu(!sidemenu)}
+          />
+        </div>
+      </div>
     </>
   );
 };
