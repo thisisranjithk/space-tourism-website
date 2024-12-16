@@ -19,9 +19,11 @@ const Navbar = ({ activeTab }) => {
                   {link.name}
                 </Link>
                 <div
-                  className={`absolute bottom-[-30px] w-full ${
-                    link.name === activeTab ? "border-b-2" : ""
-                  } group-hover:border-b-2 group-hover:border-blue-50`}
+                  className={`absolute bottom-[-30px] w-full duration-150 ${
+                    link.name === activeTab
+                      ? "border-b-2"
+                      : "group-hover:border-b-2 group-hover:border-blue-50"
+                  }`}
                 ></div>
               </li>
             ))}

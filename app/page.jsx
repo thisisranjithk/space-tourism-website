@@ -21,10 +21,11 @@ export default function Home() {
               this world experience! Explore
             </p>
           </div>
-          <div className="explore flex-1 flex items-center justify-center">
-            <div className="h-36 w-36 md:h-60 md:w-60 rounded-full bg-white text-2xl text-black flex items-center justify-center">
+          <div className="relatives flex-1 flex items-center justify-center group ">
+            <div className="h-80 w-80 bg-white flex items-center justify-center rounded-full opacity-0 group-hover:opacity-20 "></div>
+            <button className="absolute uppercase font-thin h-36 w-36 md:h-60 md:w-60 rounded-full bg-white text-2xl text-black flex items-center justify-center cursor-pointer">
               Explore
-            </div>
+            </button>
           </div>
         </div>
       </div>
