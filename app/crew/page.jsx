@@ -25,11 +25,11 @@ const Crew = () => {
         </h1>
         <section className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between lg:items-start h-auto lg:h-[65vh]  mt-8">
           <div className="relative flex items-center">
-            {showData.map((destination) => (
+            {showData.map((crew) => (
               <Image
-                key={destination.name}
-                src={destination.images.webp}
-                alt={destination.name}
+                key={crew.name}
+                src={crew.images.webp}
+                alt={crew.name}
                 width={480}
                 height={480}
                 priority={true}
