@@ -54,7 +54,9 @@ const Crew = () => {
               {crewData.map((crew) => (
                 <button
                   key={crew.name}
-                  className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-darkGrey"
+                  className={`h-2 w-2 md:h-3 md:w-3 rounded-full ${
+                    crew.name === selected ? "bg-white" : "bg-darkGrey"
+                  }`}
                   onClick={() => setSelected(crew.name)}
                 ></button>
               ))}
