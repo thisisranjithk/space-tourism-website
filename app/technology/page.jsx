@@ -16,7 +16,6 @@ const Technology = () => {
     setShowData(filtered);
   }, [selected]);
 
-  console.log(showData);
   return (
     <section className="bg-technologyMobile md:bg-technologyTablet lg:bg-technologyDesktop main-container">
       <Navbar activeTab="Technology" />

@@ -15,7 +15,6 @@ const Crew = () => {
     setShowData(filtered);
   }, [selected]);
 
-  console.log(showData);
   return (
     <section className="bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop main-container">
       <Navbar activeTab="Crew" />

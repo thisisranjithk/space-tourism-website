@@ -4,7 +4,6 @@ import Link from "next/link";
 import { MENULINKS } from "@/constants";
 const Navbar = ({ activeTab }) => {
   const [sidemenu, setSidemenu] = useState(false);
-  console.log(sidemenu);
   return (
     <>
       <header className="flex md:items-start lg:items-center justify-between h-[10vh] lg:h-[20vh] ml-[5%]">

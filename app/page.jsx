@@ -22,7 +22,7 @@ export default function Home() {
             </p>
           </div>
           <div className="relatives flex-1 flex items-center justify-center group ">
-            <div className="hidden lg:flex w-96 h-96 bg-white items-center justify-center rounded-full opacity-0 group-hover:opacity-20 "></div>
+            <div className="hidden lg:flex w-96 h-96 bg-white items-center justify-center duration-300 rounded-full opacity-0 group-hover:opacity-20 "></div>
             <button className="static lg:absolute uppercase font-thin h-36 w-36 md:h-60 md:w-60 rounded-full bg-white text-2xl text-black flex items-center justify-center cursor-pointer">
               Explore
             </button>
