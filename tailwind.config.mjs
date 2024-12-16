@@ -20,6 +20,9 @@ export default {
           "url('/assets/destination/background-destination-tablet.jpg')",
         destinationMobile:
           "url('/assets/destination/background-destination-mobile.jpg')",
+        crewDesktop: "url('/assets/crew/background-crew-desktop.jpg')",
+        crewTablet: "url('/assets/crew/background-crew-tablet.jpg')",
+        crewMobile: "url('/assets/crew/background-crew-mobile.jpg')",
       },
       fontFamily: {
         sans: ["Bellefair", "serif"],
