@@ -55,7 +55,10 @@ const Navbar = ({ activeTab }) => {
               }`}
               key={link.ref}
             >
-              <Link href={`/${link.ref}`}>
+              <Link
+                href={`/${link.ref}`}
+                onClick={() => setSidemenu(!sidemenu)}
+              >
                 <span className="font-bold tracking-widest mr-2">0{index}</span>{" "}
                 {link.name}
               </Link>
