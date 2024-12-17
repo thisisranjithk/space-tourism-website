@@ -54,7 +54,7 @@ To run the project locally, follow these steps:
 ```
 space-tourium/
 ├── public/          # Static assets (images, icons, etc.)
-├── pages/           # Next.js pages
+├── app/           # Next.js Routes
 ├── components/      # Reusable React components
 ├── package.json     # Project configuration and dependencies
 └── README.md        # Project documentation
