@@ -1,6 +1,7 @@
 # Space Tourium Website
 
 Space Tourium is a visually stunning, responsive website built using **Next.js** and **Tailwind CSS**. It offers a seamless user experience, showcasing a futuristic design for space tourism enthusiasts.
+This project was completed as part of a **Frontend Mentor challenge**, providing a real-world design to improve coding and problem-solving skills.
 
 ## Features
 
@@ -13,6 +14,7 @@ Space Tourium is a visually stunning, responsive website built using **Next.js**
 
 - **Framework**: Next.js
 - **Styling**: Tailwind CSS
+- **Challenge**: Frontend Mentor[https://www.frontendmentor.io/]
 - **Deployment**: Vercel
 
 ## Installation
@@ -55,10 +57,6 @@ space-tourium/
 ## Contributions
 
 Contributions are welcome! Feel free to fork the repository and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
 
 ---
 
