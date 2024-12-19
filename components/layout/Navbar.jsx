@@ -40,40 +40,44 @@ const Navbar = ({ activeTab }) => {
           />
         </div>
       </header>
-      <div
-        className={`block md:hidden absolute z-50 bg-[#0B0D17]/[.20] backdrop-blur-2xl duration-500 h-screen top-0 w-[75%] ${
-          sidemenu ? "right-0" : "right-[-350px]"
-        } `}
-      >
-        <ul
-          className={`flex font-barlowCondense uppercase text-2xl flex-col mt-24 space-y-6`}
+      {sidemenu && (
+        <div
+          className={`absolute z-20 bg-[#0B0D17]/[.20] backdrop-blur-2xl duration-1500 h-screen top-0 w-[75%] ${
+            sidemenu ? "right-0" : "right-[-350px]"
+          } `}
         >
-          {MENULINKS.map((link, index) => (
-            <li
-              className={`text-nowrap font-light px-12 ${
-                link.name === activeTab ? "border-r-4" : ""
-              }`}
-              key={link.ref}
-            >
-              <Link
-                href={`/${link.ref}`}
-                onClick={() => setSidemenu(!sidemenu)}
+          <ul
+            className={`flex font-barlowCondense uppercase text-2xl flex-col mt-24 space-y-6`}
+          >
+            {MENULINKS.map((link, index) => (
+              <li
+                className={`text-nowrap font-light px-12 ${
+                  link.name === activeTab ? "border-r-4" : ""
+                }`}
+                key={link.ref}
               >
-                <span className="font-bold tracking-widest mr-2">0{index}</span>{" "}
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div>
-          <img
-            src="/assets/shared/icon-close.svg"
-            alt="Close"
-            className="absolute right-8 top-8"
-            onClick={() => setSidemenu(!sidemenu)}
-          />
+                <Link
+                  href={`/${link.ref}`}
+                  onClick={() => setSidemenu(!sidemenu)}
+                >
+                  <span className="font-bold tracking-widest mr-2">
+                    0{index}
+                  </span>{" "}
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div>
+            <img
+              src="/assets/shared/icon-close.svg"
+              alt="Close"
+              className="absolute right-8 top-8"
+              onClick={() => setSidemenu(!sidemenu)}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
